@@ -11,4 +11,10 @@ describe('Character', () => {
     let myChar = new Character("Dragon");
     expect(myChar.myType).toEqual("Dragon");
   })
+
+  test('should instantiate char with empty stat array' , () => {
+    const compArray = [];
+    let myChar = new Character("Dragon");
+    expect(myChar.myStats).toEqual(compArray);
+  })
 });
