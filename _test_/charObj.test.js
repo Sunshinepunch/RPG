@@ -32,4 +32,10 @@ describe('Character.checktype', () => {
     myChar.checkType(myChar.myType);
     expect(myChar.myStats).toEqual([30, 50, 20]);
   })
+
+  test('should return Monkey attributes to character objects', () => {
+    let myChar = new Character("Monkey");
+    myChar.checkType(myChar.myType);
+    expect(myChar.myStats).toEqual([35, 30, 35]);
+  })
 });
