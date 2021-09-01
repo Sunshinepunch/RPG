@@ -9,15 +9,11 @@ export default class Character {
 
   checkType(myType) {
     if (myType === "Dragon") {
-      this.myStats = [60, 10, 30]
+      this.myStats = [50, 20, 30]
     } else if (myType === "Turtle") {
       this.myStats = [20, 40, 40]
     } else if (myType === "Monkey") {
-      this.myStats = [35, 30, 35]
+      this.myStats = [30, 30, 40]
     };
   }
 }
-
-export function rollDice(min, max) {
-  return (min-1) + Math.ceil(Math.random() * (max-min + 1));
-  }

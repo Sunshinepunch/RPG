@@ -1,4 +1,4 @@
-import { rollDice } from "../src/js/charObj";
+import { rollDice } from "../src/js/Battle.js";
 
 describe ('rollDice', () => {
 

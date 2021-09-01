@@ -23,7 +23,7 @@ describe('Character.checktype', () => {
   test('should return Dragon attributes to character object', () => {
     let myChar = new Character("Dragon");
     myChar.checkType(myChar.myType);
-    expect(myChar.myStats).toEqual([60, 10, 30]);
+    expect(myChar.myStats).toEqual([50, 20, 30]);
   })
 
   test('should return Turtle attributes to character objects', () => {
@@ -35,7 +35,7 @@ describe('Character.checktype', () => {
   test('should return Monkey attributes to character objects', () => {
     let myChar = new Character("Monkey");
     myChar.checkType(myChar.myType);
-    expect(myChar.myStats).toEqual([35, 30, 35]);
+    expect(myChar.myStats).toEqual([30, 30, 40]);
   })
 });
 
