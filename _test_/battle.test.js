@@ -2,9 +2,9 @@ import { rollDice, kungFu } from "../src/js/Battle.js";
 import Character from '../src/js/charObj.js';
 
 let myChar = new Character("Dragon");
-let boss = new Character("Turtle");
 myChar.checkType(myChar.myType);
-
+let boss = new Character("Turtle");
+boss.checkType(boss.myType);
 
 describe ('rollDice', () => {
 
@@ -38,8 +38,23 @@ describe ('kungFu', () => {
     expect(attackmod).toEqual(55);
   });
 
+  test('should instantiate boss.myStats', () => {
+    let boss = new Character("Turtle");
+    boss.checkType(boss.myType);
+  });
+
+  test('should return defmod as 44', () => {
+    let defensemod = 0;
+    let boss = new Character("Turtle");
+    boss.checkType(boss.myType);
+    defensemod = Math.floor(boss.myStats[1] * 1.10);
+    expect(defensemod).toEqual(44);
+  });
 })
 
+
+// let defensemod = Math.floor(boss.myStats[1] * 1.10);
+//     expect(defensemod).toEqual(44);
 // console.log(myChar.myStats[1]);
 //     let result = myChar.myStats.map(function (x) {
 //       return parseInt(x);
