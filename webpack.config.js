@@ -16,7 +16,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     plugins: [new ESLintPlugin(options)]// new line
     new HtmlWebpackPlugin({
-      title: 'Shape Tracker',
+      title: 'RPG',
       template: './src/index.html',
       inject: 'body'
     })
