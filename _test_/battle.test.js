@@ -3,6 +3,7 @@ import Character from '../src/js/charObj.js';
 
 let myChar = new Character("Dragon");
 let boss = new Character("Turtle");
+myChar.checkType(myChar.myType);
 
 
 describe ('rollDice', () => {
@@ -24,7 +25,7 @@ describe ('kungFu', () => {
     let bossDamage = 0;
     expect(bossDamage).toEqual(0);
   });
-  
+
   test('should return charDamage value between 1-20', () => {
     let charDamage = 0;
     charDamage += rollDice(1,20);
@@ -32,16 +33,19 @@ describe ('kungFu', () => {
     expect(charDamage).toBeGreaterThanOrEqual(1);
   });
 
-  test('should return charDamage modified by attack modifier formula', () => {
-    let charDamage = 0;
-    charDamage += rollDice(1,20);
-    expect(charDamage).toBeLessThanOrEqual(20);
-    expect(charDamage).toBeGreaterThanOrEqual(1);
+  test('should return charDamage[1] as number 50', () => {
+    let attackmod = Math.floor(myChar.myStats[0] * 1.10);
+    expect(attackmod).toEqual(55);
   });
 
 })
 
-
+// console.log(myChar.myStats[1]);
+//     let result = myChar.myStats.map(function (x) {
+//       return parseInt(x);
+//       });
+//     console.log(result);
+//     charDamage += (result * .10);
 
 // export function kungFu(myChar, boss) {
 //   let myChar = myChar.myStats//let myChar = Character.myStats;
@@ -50,6 +54,7 @@ describe ('kungFu', () => {
 //   let bossDamage = 0;
 //   // let bossHP = Boss.myStats[3]
 //   // let myChar.myStats[3] = hp > 0 & bossHP > 0 ? kungFu(char1, boss) : hp > 0 & bossHP =< 0 ? "alert you WON" : alert "Fight Over. You Lose. Try Again?" ;
+    // let attackmod = myChar.myStats.map(Number);
 //   charDamage += rollDice(1,20);//damage = rollDice(1,20)
 //   charDamage +=  (myChar.myStats[1] * .10); //add attack mod to variable damage
 //   charDamage -= (boss.myStats[2] * .10);//subtract defense mod of enemy from damage (so Character.myStats[2])
