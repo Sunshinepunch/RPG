@@ -10,6 +10,8 @@ Dragon (Offense) - [50, 20, 30]
 Turtle (Defense) - [20, 40, 40]
 Monkey (Balance) - [30, 30, 40]
 
+Damage = modifier that adds 10% of itself to roll
+
 
 Battle system
 Dice Roll System (start at HP stat and go to zero)

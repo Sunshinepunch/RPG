@@ -16,4 +16,5 @@ export default class Character {
       this.myStats = [30, 30, 40]
     };
   }
+
 }
