@@ -5,6 +5,7 @@ let myChar = new Character("Dragon");
 myChar.checkType(myChar.myType);
 let boss = new Character("Turtle");
 boss.checkType(boss.myType);
+let charDamage = 0;
 
 describe ('rollDice', () => {
 
@@ -54,11 +55,36 @@ describe ('kungFu', () => {
     let charDamage = 0;
     let attackMod = Math.floor(myChar.myStats[0] * .10);
     let defenseMod = Math.floor(boss.myStats[1] * .10);
-    charDamage += rollDice(1,20);
+    charDamage += 20;
     charDamage += attackMod;
-    charDamage += defenseMod;
+    charDamage -= defenseMod;
     expect(charDamage).toBeLessThanOrEqual(21);
     expect(charDamage).toBeGreaterThanOrEqual(0);
+  });
+
+  test('should return boss.myStats equal to 39', () => {
+    let attackMod = Math.floor(myChar.myStats[0] * .10);
+    let defenseMod = Math.floor(boss.myStats[1] * .10);
+    charDamage += 20;
+    charDamage += attackMod;
+    charDamage -= defenseMod;
+    boss.myStats[2] = (boss.myStats[2] - charDamage);
+    expect(boss.myStats[2] === 39);
+  });
+
+  test('should return boss.myStats between 19 and 38', () => {
+    let myChar1 = new Character("Dragon");
+    myChar1.checkType(myChar.myType);
+    let boss1 = new Character("Turtle");
+    boss1.checkType(boss.myType);
+    let charDamage1 = 0;
+    let attackMod = Math.floor(myChar1.myStats[0] * .10);
+    let defenseMod = Math.floor(boss1.myStats[1] * .10);
+    charDamage1 += rollDice(1,20);
+    charDamage1 += attackMod;
+    charDamage1 -= defenseMod;
+    boss1.myStats[2] = (boss1.myStats[2] - charDamage1);
+    expect( 18 < boss1.myStats[2] < 39);
   });
 })
 
