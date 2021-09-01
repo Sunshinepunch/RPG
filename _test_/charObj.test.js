@@ -1,5 +1,4 @@
 import Character from '../src/js/charObj.js';
-    
 describe('Character', () => {
 
   test('should instantiate a new basic char object', () => {
@@ -30,7 +29,7 @@ describe('Character.checktype', () => {
   test('should return Turtle attributes to character objects', () => {
     let myChar = new Character("Turtle");
     myChar.checkType(myChar.myType);
-    expect(myChar.myStats).toEqual([30, 50, 20]);
+    expect(myChar.myStats).toEqual([20, 40, 40]);
   })
 
   test('should return Monkey attributes to character objects', () => {
@@ -39,3 +38,4 @@ describe('Character.checktype', () => {
     expect(myChar.myStats).toEqual([35, 30, 35]);
   })
 });
+

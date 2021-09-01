@@ -1,11 +1,8 @@
 Character creation:
-Character constructor will have properties - name (input field), style (the 'hero' class) and hp(100), XP, inventory
+Character constructor will have properties - name (type), stats (array), index position, xp, level
 
-Style constructor will have these properties - name of style, damage, defense, speed, 
+Style array contains - , damage, defense, hp 
 3 Styles: Way of the Dragon, Turtle, Monkey
-let myChar = new Character("Dragon")
-myChar.checkType(myChar.myType);
-expect(myChar.myStats).toEqual([70, 10, 20])
 
 Battle system
 Dice Roll System (start at 100 go to zero)
@@ -14,8 +11,8 @@ Combat = d20 rolled until hp hits zero (in turns)
 Each roll displays a random anime saying (WHERE ARE YOU GETTING ALL OF THIS POWER)(THIS ISNT EVEN MY FINAL FORM)(ETC ETC)
 
 Level up
-Winning battles earns XP, XP changes level (increments of 10)
-leveling increases damage, defense (every 2 levels, extra die roll)
+Winning battles earns XP, XP changes level (level counter that goes up after battle)
+leveling increases damage, defense (every level, extra die roll)
 
 
 Inventory
