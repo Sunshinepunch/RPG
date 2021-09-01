@@ -44,14 +44,26 @@ describe ('kungFu', () => {
   });
 
   test('should return defmod as 44', () => {
-    let defensemod = 0;
     let boss = new Character("Turtle");
     boss.checkType(boss.myType);
-    defensemod = Math.floor(boss.myStats[1] * 1.10);
+    let defensemod = Math.floor(boss.myStats[1] * 1.10);
     expect(defensemod).toEqual(44);
+  });
+
+  test('should return charDamage at a value between 0 and 21 ', () => {
+    let charDamage = 0;
+    let attackMod = Math.floor(myChar.myStats[0] * .10);
+    let defenseMod = Math.floor(boss.myStats[1] * .10);
+    charDamage += rollDice(1,20);
+    charDamage += attackMod;
+    charDamage += defenseMod;
+    expect(charDamage).toBeLessThanOrEqual(21);
+    expect(charDamage).toBeGreaterThanOrEqual(0);
   });
 })
 
+
+// boss.myStats[2] = (boss.myStats[2] -= charDamage)
 
 // let defensemod = Math.floor(boss.myStats[1] * 1.10);
 //     expect(defensemod).toEqual(44);
@@ -69,7 +81,6 @@ describe ('kungFu', () => {
 //   let bossDamage = 0;
 //   // let bossHP = Boss.myStats[3]
 //   // let myChar.myStats[3] = hp > 0 & bossHP > 0 ? kungFu(char1, boss) : hp > 0 & bossHP =< 0 ? "alert you WON" : alert "Fight Over. You Lose. Try Again?" ;
-    // let attackmod = myChar.myStats.map(Number);
 //   charDamage += rollDice(1,20);//damage = rollDice(1,20)
 //   charDamage +=  (myChar.myStats[1] * .10); //add attack mod to variable damage
 //   charDamage -= (boss.myStats[2] * .10);//subtract defense mod of enemy from damage (so Character.myStats[2])
