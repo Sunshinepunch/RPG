@@ -18,3 +18,18 @@ describe('Character', () => {
     expect(myChar.myStats).toEqual(compArray);
   })
 });
+
+describe('Character.checktype', () => {
+
+  test('should return Dragon attributes to character object', () => {
+    let myChar = new Character("Dragon");
+    myChar.checkType(myChar.myType);
+    expect(myChar.myStats).toEqual([60, 10, 30]);
+  })
+
+  test('should return Turtle attributes to character objects', () => {
+    let myChar = new Character("Turtle");
+    myChar.checkType(myChar.myType);
+    expect(myChar.myStats).toEqual([30, 50, 20]);
+  })
+});
