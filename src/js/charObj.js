@@ -3,21 +3,38 @@ export class Character {
     this.myType = myType
     this.myStats = []
     this.myIndexLoc = 0
-    this.myXP = 0
     this.myLevel = 1
+    this.maxHP = 0
   }
 
   checkType(myType) {
-    if (myType === "Dragon") {
+    switch (myType) {
+      case "Dragon":
       this.myStats = [50, 20, 30]
-    } else if (myType === "Turtle") {
+      this.maxHP = 30
+      break;
+      case "Turtle":
       this.myStats = [20, 40, 40]
-    } else if (myType === "Monkey") {
+      this.maxHP = 40
+      break;
+      case "Monkey":
       this.myStats = [30, 30, 40]
+      this.maxHP = 40
+      break;
     };
   }
 
-}
+  levelUp() {
+      if (this.myLevel == undefined) {
+        console.log("Oh god help");
+      }else if (this.myLevel > 1) {
+        this.myStats[0] += 10;
+        this.myStats[1] += 10;
+        this.maxHP += 10;
+        this.myStats[2] = this.maxHP;
+      };
+    }
+  }
 
 export class Boss {
   constructor(myEnemy) {

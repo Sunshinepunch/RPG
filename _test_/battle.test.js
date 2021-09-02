@@ -172,10 +172,9 @@ describe ('kungFu', () => {
     bossDamage1 += bossAtk;
     bossDamage1 -= charDef;
     myCharHP = (myCharHP - bossDamage1);
-    myCharHP = 0;
+    boss1HP = 0;
     if(boss1HP <= 0) {
-      myChar1.myXP += 1;
-      console.log("ENEMY DEFEATED", myChar1.myXP);
+      myChar1.myLevel += 1;
     } else if(myCharHP <= 0) {
       console.log("YOUR KUNG FU WAS TOO WEAK")
     };

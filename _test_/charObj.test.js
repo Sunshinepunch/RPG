@@ -48,3 +48,14 @@ describe('Boss', () => {
     expect(boss.myDojo = "Face To Foot Style");
   })
 });
+
+describe('Character.levelUp', () => {
+
+  test('should update Dragon attributes', () => {
+    let myChar = new Character("Dragon");
+    myChar.checkType(myChar.myType);
+    myChar.myLevel += 1;
+    myChar.levelUp();
+    expect(myChar.myStats).toEqual([60,30,40]);
+  })
+});
