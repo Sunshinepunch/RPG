@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">7.69% </span>
+                <span class="strong">4.76% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>1/13</span>
+                <span class='fraction'>1/21</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">7.69% </span>
+                <span class="strong">4.76% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>1/13</span>
+                <span class='fraction'>1/21</span>
             </div>
         
             
@@ -82,13 +82,27 @@
 <a name='L23'></a><a href='#L23'>23</a>
 <a name='L24'></a><a href='#L24'>24</a>
 <a name='L25'></a><a href='#L25'>25</a>
-<a name='L26'></a><a href='#L26'>26</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -108,20 +122,27 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&nbsp;
-export function <span class="fstat-no" title="function not covered" >kungFu(</span>myChar, boss) {
-  let myCharHp = <span class="cstat-no" title="statement not covered" >myChar.myStats[3]/</span>/let myChar = Character.myStats;
-  let bossHp = <span class="cstat-no" title="statement not covered" >Boss.myStats[3]/</span>/let character2 = Character2.myStats;
-  let charDamage = <span class="cstat-no" title="statement not covered" >0;</span>
-  let bossDamage = <span class="cstat-no" title="statement not covered" >0;</span>
-  // let myChar.myStats[3] = hp &gt; 0 &amp; bossHP &gt; 0 ? kungFu(char1, boss) : hp &gt; 0 &amp; bossHP =&lt; 0 ? "alert you WON" : alert "Fight Over. You Lose. Try Again?" ;
-<span class="cstat-no" title="statement not covered" >  charDamage += rollDice(1,20);/</span>/damage = rollDice(1,20)
-<span class="cstat-no" title="statement not covered" >  charDamage +=  (myChar.myStats[1] * .10); </span>//add attack mod to variable damage
-<span class="cstat-no" title="statement not covered" >  charDamage -= (boss.myStats[2] * .10);/</span>/subtract defense mod of enemy from damage (so Character.myStats[2])
-<span class="cstat-no" title="statement not covered" >  boss.myStats[3] = (this.myStats[3] -= charDamage);/</span>/
-<span class="cstat-no" title="statement not covered" >  bossDamage += rollDice(1,20);</span>
-<span class="cstat-no" title="statement not covered" >  bossDamage += (boss.myStats[1] * .10);</span>
-<span class="cstat-no" title="statement not covered" >  bossDamage -=  (myChar.myStats[2] * .10);</span>
-<span class="cstat-no" title="statement not covered" >  character1.myStats[3] = (this.myStats[3] -= bossDamage);</span>
+export function <span class="fstat-no" title="function not covered" >kungFu(</span>) {
+  let myChar1 = <span class="cstat-no" title="statement not covered" >new Character("Dragon");</span>
+<span class="cstat-no" title="statement not covered" >    myChar1.checkType(myChar.myType);</span>
+    let boss1 = <span class="cstat-no" title="statement not covered" >new Character("Turtle");</span>
+<span class="cstat-no" title="statement not covered" >    boss1.checkType(boss.myType);</span>
+    let charDamage1 = <span class="cstat-no" title="statement not covered" >0;</span>
+    let bossDamage1 = <span class="cstat-no" title="statement not covered" >0;</span>
+    let boss1HP = <span class="cstat-no" title="statement not covered" >boss1.myStats[2];</span>
+    let myCharHP = <span class="cstat-no" title="statement not covered" >myChar1.myStats[2];</span>
+    let charAtk = <span class="cstat-no" title="statement not covered" >Math.floor(myChar1.myStats[0] * .10);</span>
+    let bossAtk = <span class="cstat-no" title="statement not covered" >Math.floor(boss1.myStats[0] * .10);</span>
+    let bossDef = <span class="cstat-no" title="statement not covered" >Math.floor(boss1.myStats[1] * .10);</span>
+    let charDef = <span class="cstat-no" title="statement not covered" >Math.floor(myChar1.myStats[1] * .10);</span>
+<span class="cstat-no" title="statement not covered" >    charDamage1 += rollDice(1,20);</span>
+<span class="cstat-no" title="statement not covered" >    charDamage1 += charAtk;</span>
+<span class="cstat-no" title="statement not covered" >    charDamage1 -= bossDef;</span>
+<span class="cstat-no" title="statement not covered" >    boss1HP = (boss1HP - charDamage1);</span>
+<span class="cstat-no" title="statement not covered" >    bossDamage1 += rollDice(1,20);</span>
+<span class="cstat-no" title="statement not covered" >    bossDamage1 += bossAtk;</span>
+<span class="cstat-no" title="statement not covered" >    bossDamage1 -= charDef;</span>
+<span class="cstat-no" title="statement not covered" >    myCharHP = (myCharHP - bossDamage1);</span>
 }
 &nbsp;
 &nbsp;
@@ -139,7 +160,7 @@ export function rollDice(min, max) {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Wed Sep 01 2021 16:51:01 GMT-0700 (Pacific Daylight Time)
+                at Thu Sep 02 2021 10:38:04 GMT-0700 (Pacific Daylight Time)
             </div>
         </div>
         <script src="prettify.js"></script>

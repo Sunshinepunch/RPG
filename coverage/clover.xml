@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1630540261490" clover="3.2.0">
-  <project timestamp="1630540261490" name="All files">
-    <metrics statements="24" coveredstatements="12" conditionals="6" coveredconditionals="5" methods="4" coveredmethods="3" elements="34" coveredelements="20" complexity="0" loc="24" ncloc="24" packages="1" files="2" classes="2"/>
+<coverage generated="1630604284323" clover="3.2.0">
+  <project timestamp="1630604284323" name="All files">
+    <metrics statements="32" coveredstatements="12" conditionals="6" coveredconditionals="5" methods="4" coveredmethods="3" elements="42" coveredelements="20" complexity="0" loc="32" ncloc="32" packages="1" files="2" classes="2"/>
     <file name="Battle.js" path="C:\Users\Becket\Desktop\RPG\src\js\Battle.js">
-      <metrics statements="13" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+      <metrics statements="21" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
       <line num="3" count="0" type="stmt"/>
       <line num="4" count="0" type="stmt"/>
       <line num="5" count="0" type="stmt"/>
       <line num="6" count="0" type="stmt"/>
+      <line num="7" count="0" type="stmt"/>
       <line num="8" count="0" type="stmt"/>
       <line num="9" count="0" type="stmt"/>
       <line num="10" count="0" type="stmt"/>
@@ -16,7 +17,14 @@
       <line num="13" count="0" type="stmt"/>
       <line num="14" count="0" type="stmt"/>
       <line num="15" count="0" type="stmt"/>
-      <line num="21" count="5" type="stmt"/>
+      <line num="16" count="0" type="stmt"/>
+      <line num="17" count="0" type="stmt"/>
+      <line num="18" count="0" type="stmt"/>
+      <line num="19" count="0" type="stmt"/>
+      <line num="20" count="0" type="stmt"/>
+      <line num="21" count="0" type="stmt"/>
+      <line num="22" count="0" type="stmt"/>
+      <line num="28" count="5" type="stmt"/>
     </file>
     <file name="charObj.js" path="C:\Users\Becket\Desktop\RPG\src\js\charObj.js">
       <metrics statements="11" coveredstatements="11" conditionals="6" coveredconditionals="5" methods="2" coveredmethods="2"/>

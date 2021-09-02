@@ -94,6 +94,8 @@ describe ('kungFu', () => {
     boss1.checkType(boss.myType);
     let charDamage1 = 0;
     let bossDamage1 = 0;
+    let boss1HP = boss1.myStats[2];
+    let myCharHP = myChar1.myStats[2];
     let charAtk = Math.floor(myChar1.myStats[0] * .10);
     let bossAtk = Math.floor(boss1.myStats[0] * .10);
     let bossDef = Math.floor(boss1.myStats[1] * .10);
@@ -101,13 +103,11 @@ describe ('kungFu', () => {
     charDamage1 += rollDice(1,20);
     charDamage1 += charAtk;
     charDamage1 -= bossDef;
-    boss1.myStats[2] = (boss1.myStats[2] - charDamage1);
+    boss1HP = (boss1HP - charDamage1);
     bossDamage1 += rollDice(1,20);
     bossDamage1 += bossAtk;
     bossDamage1 -= charDef;
-    myChar1.myStats[2] = (myChar1.myStats[2] - bossDamage1);
-    console.log(boss1.myStats[2])
-    console.log(myChar1.myStats[2])
+    myCharHP = (myCharHP - bossDamage1);
   });
 })
 
