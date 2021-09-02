@@ -28,22 +28,28 @@ export class Boss {
   }
 
   checkEnemy(myEnemy) {
-    if (myEnemy === "Wimp Lo") {
-      this.myStats = [10, 10, 40]
-      this.myDojo = "Face To Foot Style"
-    } else if (myEnemy === "Axel Kicker") {
-      this.myStats = [20, 10, 50]
-      this.myDojo = "Right Leg Gym"
-    } else if (myEnemy === "Handy Mann") {
-      this.myStats = [30, 20, 40]
-      this.myDojo = "Custodi-gym"
-    } else if (myEnemy === "Both-Legs Jim") {
-      this.myStats = [40, 10, 40]
-      this.myDojo = "Foot to Face Style"
-    } else if (myEnemy === "Baki the Grappler") {
-      this.myStats = [50, 20, 50]
-      this.myDojo = "Strongest on Earth"
-    };
-  }
+    switch (myEnemy) {
+      case "Wimp Lo":
+        this.myStats = [10, 10, 40]
+        this.myDojo = "Face To Foot Style"
+        break;
+      case "Axel Kicker":
+        this.myStats = [20, 10, 50]
+        this.myDojo = "Right Leg Gym"
+        break;
+      case "Handy Mann":
+        this.myStats = [30, 20, 40]
+        this.myDojo = "Custodi-gym"
+        break;
+      case "Both-Legs Jim":
+        this.myStats = [40, 10, 40]
+        this.myDojo = "Foot to Face Style"
+        break;
+      case "Baki the Grappler":
+        this.myStats = [50, 20, 50]
+        this.myDojo = "Strongest on Earth"
+        break;
+    }
+  };
 }
 

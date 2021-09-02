@@ -5,7 +5,7 @@ FN:33,rollDice
 FNF:2
 FNH:1
 FNDA:0,kungFu
-FNDA:8,rollDice
+FNDA:10,rollDice
 DA:3,0
 DA:4,0
 DA:5,0
@@ -31,7 +31,7 @@ DA:24,0
 DA:25,0
 DA:26,0
 DA:27,0
-DA:34,8
+DA:34,10
 LF:26
 LH:1
 BRDA:23,0,0,0

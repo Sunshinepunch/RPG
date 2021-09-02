@@ -154,6 +154,32 @@ describe ('kungFu', () => {
       console.log("YOUR KUNG FU WAS TOO WEAK")
     };
   });
+
+  test('should execute if statement when boss HP is zero', () => {
+    let charDamage1 = 0;
+    let bossDamage1 = 0;
+    let boss1HP = boss.myStats[2];
+    let myCharHP = myChar1.myStats[2];
+    let charAtk = Math.floor(myChar1.myStats[0] * .10);
+    let bossAtk = Math.floor(boss.myStats[0] * .10);
+    let bossDef = Math.floor(boss.myStats[1] * .10);
+    let charDef = Math.floor(myChar1.myStats[1] * .10);
+    charDamage1 += rollDice(1,20);
+    charDamage1 += charAtk;
+    charDamage1 -= bossDef;
+    boss1HP = (boss1HP - charDamage1);
+    bossDamage1 += rollDice(1,20);
+    bossDamage1 += bossAtk;
+    bossDamage1 -= charDef;
+    myCharHP = (myCharHP - bossDamage1);
+    myCharHP = 0;
+    if(boss1HP <= 0) {
+      myChar1.myXP += 1;
+      console.log("ENEMY DEFEATED", myChar1.myXP);
+    } else if(myCharHP <= 0) {
+      console.log("YOUR KUNG FU WAS TOO WEAK")
+    };
+  });
 })
 
 
