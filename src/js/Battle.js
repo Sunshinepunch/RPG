@@ -20,6 +20,12 @@ export function kungFu() {
   bossDamage1 += bossAtk;
   bossDamage1 -= charDef;
   myCharHP = (myCharHP - bossDamage1);
+  if(bossHP <= 0) {
+    myChar1.myXP += 1;
+    console.log("ENEMY DEFEATED", myChar1.myXP);
+  } else if(myCharHP <= 0) {
+    console.log("YOUR KUNG FU WAS TOO WEAK")
+  };
 }
 
 
