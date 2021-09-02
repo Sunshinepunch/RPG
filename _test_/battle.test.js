@@ -1,10 +1,10 @@
 import { rollDice, kungFu } from "../src/js/Battle.js";
 import {Character, Boss } from '../src/js/charObj.js';
 
-let myChar = new Character("Dragon");
-myChar.checkType(myChar.myType);
-// let boss = new Boss("Wimp Lo");
-// boss.myEnemy(boss.myEnemy);
+  let myChar1 = new Character("Dragon");
+  myChar1.checkType(myChar1.myType);
+  let boss = new Boss("Wimp Lo");
+  boss.checkEnemy(boss.myEnemy);
 
 
 describe ('rollDice', () => {
@@ -34,10 +34,10 @@ describe ('kungFu', () => {
     expect(charDamage).toBeGreaterThanOrEqual(1);
   });
 
-  test('should return charDamage[1] as number 50', () => {
-    let attackmod = Math.floor(myChar.myStats[0] * 1.10);
-    expect(attackmod).toEqual(55);
-  });
+  // test('should return charDamage[1] as number 50', () => {
+  //   let attackmod = Math.floor(myChar.myStats[0] * 1.10);
+  //   expect(attackmod).toEqual(55);
+  // });
 
   // test('should instantiate boss.myStats', () => {
   //   let boss = new Character("Turtle");
@@ -89,7 +89,7 @@ describe ('kungFu', () => {
 
   test('should return char1.myStats and boss1.myStats modified by respective damage', () => {
     let myChar1 = new Character("Dragon");
-    myChar1.checkType(myChar.myType);
+    myChar1.checkType(myChar1.myType);
     let boss1 = new Character("Turtle");
     boss1.checkType(boss.myType);
     let charDamage1 = 0;
@@ -108,6 +108,26 @@ describe ('kungFu', () => {
     bossDamage1 += bossAtk;
     bossDamage1 -= charDef;
     myCharHP = (myCharHP - bossDamage1);
+  });
+
+  test('should simulate fight between', () => {
+    let charDamage1 = 0;
+    let bossDamage1 = 0;
+    let boss1HP = boss.myStats[2];
+    let myCharHP = myChar1.myStats[2];
+    let charAtk = Math.floor(myChar1.myStats[0] * .10);
+    let bossAtk = Math.floor(boss.myStats[0] * .10);
+    let bossDef = Math.floor(boss.myStats[1] * .10);
+    let charDef = Math.floor(myChar1.myStats[1] * .10);
+    charDamage1 += rollDice(1,20);
+    charDamage1 += charAtk;
+    charDamage1 -= bossDef;
+    boss1HP = (boss1HP - charDamage1);
+    bossDamage1 += rollDice(1,20);
+    bossDamage1 += bossAtk;
+    bossDamage1 -= charDef;
+    myCharHP = (myCharHP - bossDamage1);
+    console.log(boss1HP, myCharHP);
   });
 })
 
