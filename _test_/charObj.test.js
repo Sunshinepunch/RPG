@@ -1,4 +1,4 @@
-import Character from '../src/js/charObj.js';
+import {Character, Boss} from '../src/js/charObj.js';
 describe('Character', () => {
 
   test('should instantiate a new basic char object', () => {
@@ -39,3 +39,12 @@ describe('Character.checktype', () => {
   })
 });
 
+describe('Boss', () => {
+
+  test('should instantiate a Boss and assign attributes', () => {
+    let boss = new Boss("Wimp Lo");
+    boss.checkEnemy(boss.myEnemy);
+    expect(boss.myStats).toEqual([10, 10, 40]);
+    expect(boss.myDojo = "Face To Foot Style");
+  })
+});
