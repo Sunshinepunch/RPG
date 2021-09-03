@@ -1,5 +1,5 @@
-import { rollDice, kungFu } from "../src/js/Battle.js";
-import {Character, Boss } from '../src/js/charObj.js';
+import { rollDice, kungFu } from "../src/Battle.js";
+import {Character, Boss } from '../src/charObj.js';
 
   let myChar1 = new Character("Dragon");
   myChar1.checkType(myChar1.myType);
@@ -148,8 +148,8 @@ describe ('kungFu', () => {
     myCharHP = (myCharHP - bossDamage1);
     boss1HP = 0;
     if(boss1HP <= 0) {
-      myChar1.myXP += 1;
-      console.log("ENEMY DEFEATED", myChar1.myXP);
+      myChar1.myLevel += 1;
+      console.log("ENEMY DEFEATED");
     } else if(myCharHP <= 0) {
       console.log("YOUR KUNG FU WAS TOO WEAK")
     };

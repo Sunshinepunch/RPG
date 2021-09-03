@@ -1,12 +1,15 @@
-onst path = require('path');
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
   output: {
-    filename: 'main.js',
+    filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
+  },
+  devtool: 'eval-source-map',  // new line
+  devServer: {                 // new line      // new line
   },
   plugins: [
     new CleanWebpackPlugin(),
@@ -29,7 +32,7 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: "eslint-loader"
-      }
+      },
     ]
   }
 };

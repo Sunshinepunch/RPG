@@ -1,4 +1,4 @@
-import {Character, Boss} from '../src/js/charObj.js';
+import {Character, Boss} from '../src/charObj.js';
 describe('Character', () => {
 
   test('should instantiate a new basic char object', () => {
@@ -56,6 +56,7 @@ describe('Character.levelUp', () => {
     myChar.checkType(myChar.myType);
     myChar.myLevel += 1;
     myChar.levelUp();
+    console.log(myChar.myLevel);
     expect(myChar.myStats).toEqual([60,30,40]);
   })
 });

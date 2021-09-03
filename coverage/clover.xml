@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1630620614501" clover="3.2.0">
-  <project timestamp="1630620614501" name="All files">
+<coverage generated="1630621341503" clover="3.2.0">
+  <project timestamp="1630621341503" name="All files">
     <metrics statements="68" coveredstatements="30" conditionals="16" coveredconditionals="6" methods="7" coveredmethods="6" elements="91" coveredelements="42" complexity="0" loc="68" ncloc="68" packages="1" files="2" classes="2"/>
     <file name="Battle.js" path="C:\Users\Becket\Desktop\RPG\src\js\Battle.js">
       <metrics statements="26" coveredstatements="1" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="1"/>
